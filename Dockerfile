@@ -62,22 +62,22 @@ ADD ./nginx-site.conf /etc/nginx/sites-available/default.conf
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # add test PHP file
-ADD ./index.php /usr/share/nginx/html/index.php
+#ADD ./index.php /usr/share/nginx/html/index.php
 RUN chown -Rf nginx.nginx /usr/share/nginx/html/
 
 # Add git commands to allow container updating
-ADD ./pull /usr/bin/pull
-ADD ./push /usr/bin/push
+#ADD ./pull /usr/bin/pull
+#ADD ./push /usr/bin/push
 RUN chmod 755 /usr/bin/pull
 RUN chmod 755 /usr/bin/push
 
 # Supervisor Config
 RUN /usr/bin/easy_install supervisor
 RUN /usr/bin/easy_install supervisor-stdout
-ADD ./supervisord.conf /etc/supervisord.conf
+#ADD ./supervisord.conf /etc/supervisord.conf
 
 # Start Supervisord
-ADD ./start.sh /start.sh
+#ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
 # Expose Ports
