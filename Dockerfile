@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER Joe Galaxy <github@simonebaglioni.com>
 
+ENV VERSION 0.1b
+
 # Surpress Upstart errors/warning
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -sf /bin/true /sbin/initctl
