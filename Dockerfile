@@ -23,4 +23,4 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 EXPOSE 443
 EXPOSE 80
 
-CMD ["service php5-fpm start && nginx", ""]
+CMD ["/etc/init.d/php5-fpm start && /etc/init.d/nginx start", ""]
