@@ -58,7 +58,7 @@ RUN rm -Rf /etc/nginx/conf.d/*
 RUN mkdir -p /etc/nginx/sites-available/
 RUN mkdir -p /etc/nginx/sites-enabled/
 RUN mkdir -p /etc/nginx/ssl/
-ADD ./nginx-site.conf /etc/nginx/sites-available/default.conf
+#ADD ./nginx-site.conf /etc/nginx/sites-available/default.conf
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # add test PHP file
