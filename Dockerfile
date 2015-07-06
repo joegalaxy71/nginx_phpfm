@@ -3,7 +3,7 @@ MAINTAINER Joe Galaxy <github@simonebaglioni.com>
 
 ENV VERSION 0.1b
 
-# Let the conatiner know that there is no tty
+# Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
 # Update System
@@ -22,10 +22,10 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 #create lock & run dirs
 RUN mkdir -p /var/lock/nginx /var/run/nginx /var/log/supervisor
 
-
+COPY supervisor.conf /etc/supervisor/supervisor.conf
 
 # Expose Ports
 EXPOSE 443
 EXPOSE 80
 
-CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
+CMD ["/usr/bin/supervisord"]
