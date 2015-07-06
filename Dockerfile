@@ -23,4 +23,4 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 EXPOSE 443
 EXPOSE 80
 
-CMD ["/usr/sbin/nginx ", " -c /etc/nginx/nginx.conf"]
+CMD ["/usr/sbin/nginx", "-c /etc/nginx/nginx.conf"]
