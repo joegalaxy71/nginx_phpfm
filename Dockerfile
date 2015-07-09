@@ -24,3 +24,5 @@ EXPOSE 443
 EXPOSE 80
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisor.conf"]
+
+#CMD ["/usr/sbin/nginx"]
