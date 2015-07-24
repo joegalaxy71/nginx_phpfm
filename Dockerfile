@@ -2,7 +2,7 @@ FROM joegalaxy/debase
 
 MAINTAINER Joe Galaxy <github@simonebaglioni.com>
 
-ENV VERSION 0.1b
+ENV VERSION 0.2b
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
@@ -14,9 +14,9 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN mkdir -p /var/lock/nginx /var/run/nginx /var/log/supervisor
 
 # copy configuration files
-COPY supervisor.conf /etc/supervisor/supervisor.conf
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY php5-fpm.conf /etc/
+COPY conf/supervisor.conf /etc/supervisor/supervisor.conf
+COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY conf/php5-fpm.conf /etc/
 
 
 # Expose Ports
