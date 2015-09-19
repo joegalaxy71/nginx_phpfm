@@ -18,6 +18,10 @@ COPY conf/supervisor.conf /etc/supervisor/supervisor.conf
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/php5-fpm.conf /etc/
 
+;#create the socket file
+;RUN mkdir -p /var/run/nf
+;RUN mkfifo /var/run/nf/nf.sock
+;RUN chmod ugo+rwx /var/run/nf/nf.sock
 
 # Expose Ports
 EXPOSE 443
