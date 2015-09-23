@@ -16,12 +16,12 @@ RUN mkdir -p /var/lock/nginx /var/run/nginx /var/log/supervisor
 # copy configuration files
 COPY conf/supervisor.conf /etc/supervisor/supervisor.conf
 COPY conf/nginx.conf /etc/nginx/nginx.conf
-COPY conf/php5-fpm.conf /etc/
+COPY conf/php5-fpm.conf /etc/php5/fpm/php-fpm.conf
 
-;#create the socket file
-;RUN mkdir -p /var/run/nf
-;RUN mkfifo /var/run/nf/nf.sock
-;RUN chmod ugo+rwx /var/run/nf/nf.sock
+#create the socket file
+#RUN mkdir -p /var/run/nf
+#RUN mkfifo /var/run/nf/nf.sock
+#RUN chmod ugo+rwx /var/run/nf/nf.sock
 
 # Expose Ports
 EXPOSE 443
