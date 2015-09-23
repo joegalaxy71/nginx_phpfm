@@ -2,6 +2,8 @@ FROM joegalaxy/debase
 
 MAINTAINER Joe Galaxy <github@simonebaglioni.com>
 
+LABEL Description="Supervisor->nginx&php-fpm: mount a host volume in /web" Vendor="Avero" Version="1.0"
+
 ENV VERSION 0.2b
 
 # Let the container know that there is no tty
